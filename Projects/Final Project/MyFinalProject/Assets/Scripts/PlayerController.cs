@@ -15,14 +15,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
 
-        moveInput = moveInput.normalized;
     }
 
     void FixedUpdate()
     {
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+
+        moveInput = moveInput.normalized;
+
         rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
     }
 }
