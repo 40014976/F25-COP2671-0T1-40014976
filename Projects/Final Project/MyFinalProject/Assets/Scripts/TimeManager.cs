@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    public float timeScale = 60f;
+    public float timeScale = 60f; //60 means 1 second is 1 in game minute
     public int hours = 6;
     public int minutes = 0;
     private float timeAccumulator = 0f;
-    [Range(0f, 1f)] public float timePercent;
-    public static TimeManager Instance;
+    [Range(0f, 1f)] public float timePercent; //0 is midnight, 1 is start of night
+    public static TimeManager Instance { get; private set; } //basic singleton
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        if (Instance == null)
+        if(Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(this);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
         }
     }
 
@@ -35,8 +35,8 @@ public class TimeManager : MonoBehaviour
             if (minutes >= 60)
             {
                 minutes = 0;
-
                 hours++;
+
                 if (hours >= 24)
                 {
                     hours = 0;
@@ -44,16 +44,12 @@ public class TimeManager : MonoBehaviour
             }
         }
 
+       
         timePercent = (hours + minutes / 60f) / 24f;
     }
 
     public float GetTimePercent()
     {
         return timePercent;
-    }
-
-    public string GetTimeString()
-    {
-        return string.Format("{0:00}:{1:00}", hours, minutes);
     }
 }
