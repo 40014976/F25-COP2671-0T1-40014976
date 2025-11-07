@@ -30,4 +30,13 @@ public class PlayerController : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Harvestable"))
+        {
+            Debug.Log("Picked up " + collision.name);
+            Destroy(collision.gameObject);
+        }
+    }
 }
