@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class InventoryEntry : MonoBehaviour
+public class InventoryEntry
 {
     public HarvestableItem item;
     public int quantity;

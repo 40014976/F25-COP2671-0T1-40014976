@@ -4,6 +4,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<InventoryEntry> items = new List<InventoryEntry>();
+    public InventoryUI inventoryUI;
 
     public void AddItem(HarvestableItem newItem)
     {
@@ -17,5 +18,7 @@ public class Inventory : MonoBehaviour
         {
             items.Add(new InventoryEntry { item = newItem, quantity = 1 });
         }
+
+        inventoryUI.RefreshUI();
     }
 }

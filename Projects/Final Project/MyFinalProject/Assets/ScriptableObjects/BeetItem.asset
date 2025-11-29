@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3bfb8997dddb84fad9029230a5d10b, type: 3}
   m_Name: BeetItem
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: Beet
+  icon: {fileID: 6179586033448826104, guid: 3c0fd9e79fa04564cb25b27e59aceaac, type: 3}
