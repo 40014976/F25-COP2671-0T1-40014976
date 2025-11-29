@@ -18694,6 +18694,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02bbc637ee979284ea6ebaa7b56d2bf1, type: 2}
   selectedSeed: {fileID: 11400000, guid: 5190b10102a608548943e3500ee1a024, type: 2}
   currentTool: 0
+  interactionRadius: 3
 --- !u!1 &2110063254
 GameObject:
   m_ObjectHideFlags: 0

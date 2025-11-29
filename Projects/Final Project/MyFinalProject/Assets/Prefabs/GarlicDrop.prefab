@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4398228504588483605}
   - component: {fileID: 1230836002258568718}
   - component: {fileID: 5996536764329765581}
+  - component: {fileID: 1376309402415210188}
   m_Layer: 0
   m_Name: GarlicDrop
   m_TagString: Harvestable
@@ -134,3 +135,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.031677}
   m_EdgeRadius: 0
+--- !u!114 &1376309402415210188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681755125189303840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4e45b5f315f204b9d13a3bac45a42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
